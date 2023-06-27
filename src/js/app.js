@@ -38,7 +38,6 @@ async function getData(API) {
         cards.innerHTML += shoppingData
     })
 
-    console.log(mBtn);
 }
 
 getData('../json/cards.json')
