@@ -1,3 +1,5 @@
+import '../css/all.css'
+
 const shopBtn = document.querySelector('.shopping')
 const cards = document.querySelector('.cards')
 const elLoader = document.querySelector('.loader')
@@ -50,17 +52,19 @@ async function getData(API) {
 
 
 
-async function getElbtn() {
-    await getData('../json/cards.json')
-    const mBtn = document.querySelectorAll('.minus-btn')
-    const pBtn = document.querySelectorAll('.plus-btn')
+// async function getElbtn() {
+//     await getData('../json/cards.json')
+//     const mBtn = document.querySelectorAll('.minus-btn')
+//     const pBtn = document.querySelectorAll('.plus-btn')
 
-    mBtn.forEach((item)=> {
-        item.addEventListener('click', (e)=> {
-            let elCard = e.target.parentElement.parentElement.parentElement.parentElement
+//     mBtn.forEach((item)=> {
+//         item.addEventListener('click', (e)=> {
+//             let elCard = e.target.parentElement.parentElement.parentElement.parentElement
             
-        })
-    })
-}
+//         })
+//     })
+// }
+
+import getElbtn from './about'
 
 getElbtn()
