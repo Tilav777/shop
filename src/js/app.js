@@ -1,8 +1,14 @@
 const shopBtn = document.querySelector('.shopping')
 const cards = document.querySelector('.cards')
 const elLoader = document.querySelector('.loader')
-const mBtn = document.querySelectorAll('.minus-btn')
-const pBtn = document.querySelectorAll('.plus-btn')
+
+const basket = document.querySelector('.basket')
+
+console.log(document);
+
+
+let purchase = 0;
+
 
 function shopBtnClick() {
     location.href = 'about.html'
@@ -36,10 +42,25 @@ async function getData(API) {
         </div>
         `
         cards.innerHTML += shoppingData
+        
     })
+
 
 }
 
-getData('../json/cards.json')
 
 
+async function getElbtn() {
+    await getData('../json/cards.json')
+    const mBtn = document.querySelectorAll('.minus-btn')
+    const pBtn = document.querySelectorAll('.plus-btn')
+
+    mBtn.forEach((item)=> {
+        item.addEventListener('click', (e)=> {
+            let elCard = e.target.parentElement.parentElement.parentElement.parentElement
+            
+        })
+    })
+}
+
+getElbtn()
